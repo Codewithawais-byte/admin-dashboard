@@ -174,6 +174,7 @@ const CreateProductForm = () => {
                                 }
                             },
                         }]}>
+                            
                         <InputNumber size="large" placeholder="Enter discounted price" style={{ width: "100%" }} />
                     </Form.Item>
                 </div>
