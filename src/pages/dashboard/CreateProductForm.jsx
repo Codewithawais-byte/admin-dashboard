@@ -3,8 +3,8 @@ import { Form, Input, InputNumber, Upload, Button, Select, message } from "antd"
 import { PlusOutlined } from "@ant-design/icons";
 import "antd/dist/reset.css";
 import axios from "axios";
-// import ReactQuill from "react-quill";
-// import "react-quill/dist/quill.snow.css";
+import ReactQuill from "react-quill";
+import "react-quill/dist/quill.snow.css";
 
 const { Option } = Select;
 
@@ -174,7 +174,6 @@ const CreateProductForm = () => {
                                 }
                             },
                         }]}>
-                            
                         <InputNumber size="large" placeholder="Enter discounted price" style={{ width: "100%" }} />
                     </Form.Item>
                 </div>
@@ -278,12 +277,11 @@ const CreateProductForm = () => {
 
 
                 <Form.Item label="Description" name="description" rules={[{ required: true, message: "Please enter product description" }]}>
-                    {/* <ReactQuill
-                        
-                    /> */}
-                    {/* value={description}
-                        onChange={setDescription} */}
-                        {/* style={{ height: '300px', marginBottom: '50px' }} */}
+                    <ReactQuill
+                        value={description}
+                        onChange={setDescription}
+                        style={{ height: '300px', marginBottom: '50px' }}
+                    />
                 </Form.Item>
 
                 <Form.Item>
